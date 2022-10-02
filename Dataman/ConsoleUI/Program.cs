@@ -11,7 +11,27 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!"); //This is to test github desktop
+            MenuInstructions.MainMenuDisplay();
+
+            string userChoice = Console.ReadLine();
+
+            switch (userChoice)
+            {
+                case "1":
+
+                    break;
+                case "2":
+
+                    break;
+                case "Z":
+                    Console.WriteLine("Goodbye");
+                    Console.ReadLine();
+                    Environment.Exit(0);
+                    break;
+                default:
+                    Console.WriteLine("Not a valid option");
+                    break;
+            }
         }
     }
 }
