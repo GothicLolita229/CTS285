@@ -25,7 +25,7 @@ namespace ConsoleUI
                         Console.ReadKey();
                         break;
                     case "2":
-
+                        Console.WriteLine("Memory Bank is pending....");
                         break;
                     case "z":
                         Console.WriteLine("Goodbye");

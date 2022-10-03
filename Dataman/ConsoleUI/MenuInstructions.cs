@@ -12,7 +12,7 @@ namespace ConsoleUI
         {
             Console.WriteLine("Dataman Main Menu");
             Console.WriteLine("1. Answer Checker");
-            Console.WriteLine("2. Other options to be included later");
+            Console.WriteLine("2. Memory Bank");
             Console.WriteLine("Press Z to exit");
         }
 
