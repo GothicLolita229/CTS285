@@ -74,6 +74,9 @@ namespace DatamanLibrary
                         Console.WriteLine($"The correct answer is {correctAnswer}");
                     }
                     break;
+                default:
+                    Console.WriteLine("Please try again and reformat your answer.");
+                    break;
 
             }
 
