@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleUI
 {
-    class MenuInstructions
+    public class MenuInstructions
     {
         public static void MainMenuDisplay()
         {

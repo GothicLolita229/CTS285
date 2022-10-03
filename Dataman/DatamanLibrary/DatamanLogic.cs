@@ -8,7 +8,7 @@ namespace DatamanLibrary
 {
     public class DatamanLogic
     {
-        public static bool CheckProblem()
+        public static bool CheckProblem(Problem problem, int userAnswer)
         {
 
             return true;

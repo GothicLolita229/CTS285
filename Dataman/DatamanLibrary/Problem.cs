@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DatamanLibrary
 {
-    class Problem
+    public class Problem
     {
         public Problem(int firstInt, int secondInt, char mapping, int answer)
         {
