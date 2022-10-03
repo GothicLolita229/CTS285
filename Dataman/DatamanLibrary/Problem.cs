@@ -8,17 +8,18 @@ namespace DatamanLibrary
 {
     public class Problem
     {
-        public Problem(int firstInt, int secondInt, char mapping, int answer)
+        public Problem() { }
+        public Problem(int firstInt, string operand, int secondInt, double answer)
         {
             FirstInt = firstInt;
+            Operand = operand;
             SecondInt = secondInt;
-            Mapping = mapping;
             Answer = answer;
         }
 
         public int FirstInt { get; set; }
         public int SecondInt { get; set; }
-        public char Mapping { get; set; }
-        public int Answer { get; set; }
+        public string Operand { get; set; }
+        public double Answer { get; set; }
     }
 }

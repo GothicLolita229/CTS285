@@ -50,5 +50,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DatamanLibrary\DatamanLibrary.csproj">
+      <Project>{d445c50a-2af0-4a9d-8b18-ad5aad5c6a32}</Project>
+      <Name>DatamanLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
