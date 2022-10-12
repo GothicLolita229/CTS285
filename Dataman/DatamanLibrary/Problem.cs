@@ -9,6 +9,13 @@ namespace DatamanLibrary
     public class Problem
     {
         public Problem() { }
+
+        public Problem(int firstInt, string operand, int secondInt)
+        {
+            FirstInt = firstInt;
+            Operand = operand;
+            SecondInt = secondInt;
+        }
         public Problem(int firstInt, string operand, int secondInt, double answer)
         {
             FirstInt = firstInt;

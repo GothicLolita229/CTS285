@@ -24,5 +24,13 @@ namespace ConsoleUI
             Console.WriteLine("Example: 4 * 4 = 16");
             Console.Write("Please enter a math problem > ");
         }
+
+        public static void MemoryBankOption()
+        {
+            Console.WriteLine("A. Store Problems");
+            Console.WriteLine("B. Solve Memory Bank problems");
+            Console.WriteLine("C. Clear Memory Bank");
+            Console.WriteLine("D. Back to Main");
+        }
     }
 }
