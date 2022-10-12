@@ -92,12 +92,17 @@ namespace DatamanLibrary
 
         public static void MemoryBankSolve(List<Problem> memoryBankList)
         {
-            foreach(Problem problem in memoryBankList)
+            /*foreach(Problem problem in memoryBankList)
             {
                 int i = 1;
                 Console.WriteLine($"Solve problem {i} ");
                 MBCheckProblem(problem);
                 i++;
+            }*/
+            for(int i = 0; i < memoryBankList.Count; i++)
+            {
+                Console.WriteLine($"Solve problem {i + 1} ");
+                MBCheckProblem(memoryBankList[i]);
             }
         }
 
@@ -115,8 +120,8 @@ namespace DatamanLibrary
             switch (userProblem.Operand)
             {
                 case "+":
-                    correctAnswer = userProblem.FirstInt + secondNum;
-                    Console.Write($"Your problem is {firstNum} + {secondNum} = ? ");
+                    correctAnswer = userProblem.FirstInt + userProblem.SecondInt;
+                    Console.Write($"Your problem is {userProblem.FirstInt} + {userProblem.SecondInt} = ? ");
                     userAnswer = TryParse.ParseInt(Console.ReadLine());
                     if (userAnswer == correctAnswer)
                     { Console.WriteLine("Your answer is correct!"); }
@@ -128,8 +133,8 @@ namespace DatamanLibrary
                     Console.ReadKey();
                     break;
                 case "-":
-                    correctAnswer = firstNum - secondNum;
-                    Console.Write($"Your problem is {firstNum} - {secondNum} = ? ");
+                    correctAnswer = userProblem.FirstInt - userProblem.SecondInt;
+                    Console.Write($"Your problem is {userProblem.FirstInt} - {userProblem.SecondInt} = ? ");
                     userAnswer = TryParse.ParseInt(Console.ReadLine());
                     if (userAnswer == correctAnswer)
                     { Console.WriteLine("Your answer is correct!"); }
@@ -141,13 +146,13 @@ namespace DatamanLibrary
                     break;
                 case "/":
                     int remainder;
-                    correctAnswer = firstNum / secondNum;
-                    Console.Write($"Your problem is {firstNum} / {secondNum} = ? ");
-                    correctAnswer = firstNum / secondNum;
+                    correctAnswer = userProblem.FirstInt / userProblem.SecondInt;
+                    Console.Write($"Your problem is {userProblem.FirstInt} / {userProblem.SecondInt} = ? ");
+                    correctAnswer = userProblem.FirstInt / userProblem.SecondInt;
                     userAnswer = Console.Read();
                     Console.Write(" R ");
                     remainder = Console.Read();
-                    int correctAnswer2 = Math.DivRem(firstNum, secondNum, out remainder);
+                    int correctAnswer2 = Math.DivRem(userProblem.FirstInt, userProblem.SecondInt, out remainder);
                     // https://www.geeksforgeeks.org/c-sharp-math-divrem-method/
                     if (userAnswer == correctAnswer)
                     {
@@ -161,8 +166,8 @@ namespace DatamanLibrary
                     }
                     break;
                 case "*":
-                    correctAnswer = firstNum * secondNum;
-                    Console.WriteLine($"Your problem is {firstNum} * {secondNum} = ?");
+                    correctAnswer = userProblem.FirstInt * userProblem.SecondInt;
+                    Console.WriteLine($"Your problem is {userProblem.FirstInt} * {userProblem.SecondInt} = ?");
                     userAnswer = TryParse.ParseInt(Console.ReadLine());
                     if (userAnswer == correctAnswer)
                     { Console.WriteLine("Your answer is correct!"); }

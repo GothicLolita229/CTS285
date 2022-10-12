@@ -45,18 +45,18 @@ namespace ConsoleUI
                                 MenuInstructions.AnswerCheckerOption();
                                 for(int i = 1; i <= numOfProbs && i <= 10; i++)
                                 {
-                                    Console.Write($"Enter problem #{i} =>");
+                                    Console.Write($"Enter problem #{i} => ");
                                     userProblem = Console.ReadLine();
                                     memoryBankProblems = DatamanLogic.MemoryBank(userProblem, memoryBankProblems);
                                 }
                                 break;
                             case "b":
                                 //Solve problems from Memory Bank
-                                //Logic.memoryBankSolve(memoryBankProblems);
+                                DatamanLogic.MemoryBankSolve(memoryBankProblems);
                                 break;
                             case "c":
                                 //Clear Memory Bank
-                                //DatamanLogic.MemoryBankProblems.Clear();
+                                memoryBankProblems.Clear();
                                 break;
                             case "d":
                                 Console.WriteLine("Going back to Main...");
