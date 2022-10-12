@@ -10,7 +10,6 @@ namespace DatamanLibrary
     {
         public static void CheckProblem(string userProblem)
         {
-            
             string[] tokens = userProblem.Split(' ');
             int firstNum = TryParse.ParseInt(tokens[0]);
             string operand = tokens[1];
@@ -75,9 +74,7 @@ namespace DatamanLibrary
                 default:
                     Console.WriteLine("Please try again and reformat your answer.");
                     break;
-
             }
-
         }
 
         public static List<Problem> MemoryBank(string problem, List<Problem> memoryBankList)
@@ -92,13 +89,6 @@ namespace DatamanLibrary
 
         public static void MemoryBankSolve(List<Problem> memoryBankList)
         {
-            /*foreach(Problem problem in memoryBankList)
-            {
-                int i = 1;
-                Console.WriteLine($"Solve problem {i} ");
-                MBCheckProblem(problem);
-                i++;
-            }*/
             for(int i = 0; i < memoryBankList.Count; i++)
             {
                 Console.WriteLine($"Solve problem {i + 1} ");
@@ -108,13 +98,6 @@ namespace DatamanLibrary
 
         public static void MBCheckProblem(Problem userProblem)
         {
-
-            /*string[] tokens = userProblem.Split(' ');
-            int firstNum = TryParse.ParseInt(tokens[0]);
-            string operand = tokens[1];
-            int secondNum = TryParse.ParseInt(tokens[2]);
-            double correctAnswer;
-            Problem problem = new Problem(firstNum, operand, secondNum);*/
             double correctAnswer;
             int userAnswer;
             switch (userProblem.Operand)
@@ -180,9 +163,7 @@ namespace DatamanLibrary
                 default:
                     Console.WriteLine("Please try again and reformat your answer.");
                     break;
-
             }
-
         }
     }
 }
